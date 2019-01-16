@@ -29,7 +29,11 @@ module AttractionsHelper
       attractions_list_element(attractions) do |a|
         #if user is an admin, allow them to visit the show page of the attraction
         if user.try(:admin?)
+<<<<<<< HEAD
           "Show #{a.name}"
+=======
+          "Inspect #{a.name}"
+>>>>>>> ae7399e2959bb186b1577f41972b1ecc65728d91
         else
           #if user is not an admin, they may "ride" the attraction
           "Go on #{a.name}"

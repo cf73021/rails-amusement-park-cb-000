@@ -6,8 +6,12 @@ class RidesController < ApplicationController
     #set variable = to an attempt to take_ride
     error_message = @ride.try(:take_ride)
     #if there is no error message, and a ride was created, save the new ride.
+<<<<<<< HEAD
     
     if @ride && error_message.empty?
+=======
+    if @ride && error_message.empty
+>>>>>>> ae7399e2959bb186b1577f41972b1ecc65728d91
       @ride.save
       #give user a notice that they rode the ride after save.
       flash[:notice] = "Thanks for riding the #{@ride.attraction.name}!"
